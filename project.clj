@@ -5,7 +5,7 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
   ;; CLJ source code path
-  :source-paths ["src" "src/clj"]
+  :source-paths ["src/clj"]
   :dependencies [[org.clojure/clojure "1.5.1"]
                  [ring/ring-jetty-adapter "1.1.0"]
                  [com.cemerick/piggieback "0.0.4"]
