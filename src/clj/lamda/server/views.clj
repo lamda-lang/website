@@ -1,7 +1,7 @@
 (ns lamda.server.views
   (:require
     [hiccup
-
+      [page :refer [html5]]
       [element :refer [javascript-tag]]
      [page :refer [include-js]]]
     [garden.core :refer [css]]))
