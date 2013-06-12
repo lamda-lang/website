@@ -117,3 +117,6 @@
       [:p "Go functional!"]]
      [:div {:id "menu"} (menu-html)]
      ]]))
+
+;; write to static html file
+(spit "resources/public/index.html" (index-page))
