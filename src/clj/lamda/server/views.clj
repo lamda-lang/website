@@ -12,7 +12,8 @@
 (def header-height (px 150))
 (def default-font "Open Sans")
 (def header-font-size (pt 16))
-(def header-font-color (rgb :#F27E18))
+(def default-font-color (rgb :#FFFFFF))
+(def hover-color (rgb :#F27E18))
 (def default-background-color (rgb :#242424))
 
 (defn body-css []
@@ -24,7 +25,7 @@
 (defn header-css []
   ["#header"
    :background default-background-color
-   :color header-font-color
+   :color default-font-color
    :margin 0
    :text-align :center
    [:h1
@@ -74,14 +75,18 @@
     :padding [0 (em 1)]
     ["& > a"
      :float :left
-     :color (rgb :#c60)
+     :color default-font-color
      :text-decoration :none
      :line-height 3
      :fint-weight :bold
      :text-transform :uppercase
      ["&:hover"
-      :color header-font-color
+      :color hover-color
       :text-decoration :none]]]])
+
+(defn menu-css []
+  ["#menu"
+   :vertical-align :middle])
 
 (defn default-css []
   (css
@@ -119,4 +124,4 @@
      ]]))
 
 ;; write to static html file
-(spit "resources/public/index.html" (index-page))
+#_(spit "resources/public/index.html" (index-page))
